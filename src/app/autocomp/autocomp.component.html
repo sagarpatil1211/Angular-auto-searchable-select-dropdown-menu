@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-lg-6">
+       <!-- ---------------Select menu start -------------------- -->
+    <div class="ng-autocomplete mt-3 ">
+       <ng-autocomplete
+        [data]="states"      
+       [searchKeyword]="keyword"
+        placeholder="Select country"
+        (selected)='selectEvent($event)' 
+        [itemTemplate]="itemTemplate" 
+        [notFoundTemplate]="notFoundTemplate">
+      </ng-autocomplete>
+
+      <ng-template #itemTemplate let-states>
+        <a [innerHTML]="states.state"></a>
+      </ng-template>
+
+      <ng-template #notFoundTemplate let-notFound>
+        <div [innerHTML]="notFound"></div>
+      </ng-template>
+    </div>
+       <!-- ---------------Select menu end -------------------- -->
+
+  </div>
+
+  <div class="col-lg-8">
+    <h2>Steps to create Searchable select dropdown</h2>
+    <div>
+      <img src="assets/image1.png" width="100%" alt="">      
+    </div>
+    <hr>
+    <div>
+      <h3>In html file</h3>
+      <img src="assets/image2.png" alt="">
+    </div>
+    <hr>
+    <div>
+      <h3>In ts file</h3>
+      <img src="assets/image3.png" alt="">
+    </div>
+    <hr>
+    <div>
+      <h3>To set dropdown width - css file</h3>
+      <pre>
+        .ng-autocomplete &#123;
+          width: 400px;
+      }
+      </pre>
+    </div>
+    <div>
+      
+    </div>
+  </div>
+
+</div>
